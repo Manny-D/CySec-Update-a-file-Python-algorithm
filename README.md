@@ -14,32 +14,28 @@ I will need to create an algorithm that uses Python code to check whether the al
 The file containing the allow list is named <b><i>"allow_list.txt"</i></b> and will be assigned to the <b><i>import_file</i></b>  variable. I am going to use a <b><i>with</i></b> statement to initiate the <b><i>open()</i></b> function to read the file while utilizing another variable, named <b><i>file</i></b>, to store the file to be read:
 <img src="image1.png">
 <br>
-<br>
 
 <h2>Read the file contents</h2>
 Using the <b><i>.read()</i></b>  method, I’ll convert the contents of the allow list file into a string, so we can read them. It will be stored the string in a variable called <b><i>ip_addresses</i>:</b>
 <img src="image2.png">
-<br>
 <br>
 
 <h2>Convert the string into a list</h2>
 To remove individual IP addresses from the allow list, the IP addresses need to be in a list format. With the <b><i>.split()</i></b>  method, I’ll convert the <b><i>ip_addresses</i></b> string into a list:</b>
 <img src="image3.png">
 <br>
-<br>
 
 <h2>Iterate through the remove list</h2>
 <b><i>remove_list</i></b>  is the second list that contains all of the IP addresses that should be removed from the <b><i>ip_addresses</i></b>  list. I will create a <b><i>for</i></b>  loop that will iterate through the <b><i>remove_list</i></b> and use <b><i>element</i></b> as the loop variable:</br>
 <img src="image4.png">
 <br>
-<br>
 
 <h2>Remove IP addresses that are on the remove list</h2>
 In order to remove all the IP addresses from the allow list that are also on the remove list: 
-First, I’ll create a conditional that evaluates if the loop variable <b><i>element</i></b> is part of the <b><i>ip_addresses</i></b> list. 
-Then, within that conditional, apply the <b><i>.remove()</i></b> method to the <b><i>ip_addresses</i></b> list and remove the IP addresses identified in the loop variable <b><i>element</i>:</b>
+
+- First, I’ll create a conditional that evaluates if the loop variable <b><i>element</i></b> is part of the <b><i>ip_addresses</i></b> list. 
+- Then, within that conditional, apply the <b><i>.remove()</i></b> method to the <b><i>ip_addresses</i></b> list and remove the IP addresses identified in the loop variable <b><i>element</i>:</b>
 <img src="image5.png">
-<br>
 <br>
 
 <h2>Update the file with the revised list of IP addresses</h2>
@@ -51,7 +47,6 @@ Now with these IP addresses removed from the <b><i>ip_address</i></b> variable, 
 - Apply <b><i>.join()</i></b> to the string <b><i>"\n"</i></b> which separates elements in the file by placing them on a new line.
 - Then, use another <b><i>with</i></b> statement and the <b><i>.write()</i></b> method to write over the file assigned to the <b><i>import_file</i></b> variable. </br>
 <img src="image6.png">
-<br>
 <br>
 
 <h2>Summary</h2>
